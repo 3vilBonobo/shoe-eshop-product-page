@@ -1,348 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/assets/Solemate-sm.jpg">
-    <title>SoleMate - Online Shoe Store</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/assets/Solemate-sm.jpg">
+  <title>SoleMate - Online Shoe Store</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="script.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div class="header-top">
-        <a href="/index.html"><img src="./assets/Solemate-logo.jpg" alt="" class="logo" /></a>   
-        <div class="search">
-          <input id="input-box" type="text" placeholder="Αναζήτηση..." autocomplete="off" />
-          <div class="result-box">
-          </div>
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <a href="/index.html"><img src="./assets/Solemate-logo.jpg" alt="" class="logo" /></a>
+      <div class="search">
+        <input id="input-box" type="text" placeholder="Αναζήτηση..." autocomplete="off" />
+        <div class="result-box">
         </div>
-        <button class="cart"><span>Καλάθι</span><i class="fas fa-shopping-cart"></i><span class="cart-number">0</span></button>
       </div>
-      <div class="header-bottom">
-        <nav>
-          <div class="menu-button" onclick="showSidebar()">
-            <a href="#"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="26"
-                viewBox="0 96 960 960"
-                width="26"
-              >
+      <button class="cart"><span>Καλάθι</span><i class="fas fa-shopping-cart"></i><span
+          class="cart-number">0</span></button>
+    </div>
+    <div class="header-bottom">
+      <nav>
+        <div class="menu-button" onclick="showSidebar()">
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+              <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+            </svg></a>
+        </div>
+        <ul>
+
+          <li class="hideOnMobile"><a href="#">ΑΡΧΙΚΗ</a></li>
+          <li class="hideOnMobile"><a href="#">ΠΑΠΟΥΤΣΙΑ</a></li>
+          <li class="hideOnMobile"><a href="#">ΚΑΤΑΣΤΗΜΑΤΑ</a></li>
+          <li class="hideOnMobile"><a href="#">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+        </ul>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
                 <path
-                  d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"
-                /></svg
-            ></a>
-          </div>
-          <ul>
-            
-            <li class="hideOnMobile"><a href="#">ΑΡΧΙΚΗ</a></li>
-            <li class="hideOnMobile"><a href="#">ΠΑΠΟΥΤΣΙΑ</a></li>
-            <li class="hideOnMobile"><a href="#">ΚΑΤΑΣΤΗΜΑΤΑ</a></li>
-            <li class="hideOnMobile"><a href="#">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
-          </ul>
-          <ul class="sidebar">
-            <li onclick="hideSidebar()">
-              <a href="#"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="26"
-                  viewBox="0 96 960 960"
-                  width="26"
-                >
-                  <path
-                    d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"
-                  /></svg
-              ></a>
-            </li>
-            <li><a href="#">ΑΡΧΙΚΗ</a></li>
-            <li><a href="#">ΠΡΟΪΟΝΤΑ</a></li>
-            <li><a href="#">ΚΑΤΑΣΤΗΜΑΤΑ</a></li>
-            <li><a href="#">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <!-- Replace hardcoded breadcrums with dynamically created code using JS, when server-side page URL is available  -->
+                  d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z" />
+              </svg></a>
+          </li>
+          <li><a href="#">ΑΡΧΙΚΗ</a></li>
+          <li><a href="#">ΠΡΟΪΟΝΤΑ</a></li>
+          <li><a href="#">ΚΑΤΑΣΤΗΜΑΤΑ</a></li>
+          <li><a href="#">ΕΠΙΚΟΙΝΩΝΙΑ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <!-- Replace hardcoded breadcrums with dynamically created code using JS, when server-side page URL is available  -->
 
-      <div class="breadcrums">
-        <ol>
-          <li><a href="/index.html">Αρχική</a></li>
-          <li><a href="#">Παπούτσια</a></li>
-          <li><a href="#">Unisex</a></li>
-          <li>Custom Converse Black</li>
-        </ol>
-      </div>
-      <!-- Main product image slider and info section -->
-      <section class="product-main">
-        <div class="card-wrapper">
-          <div class="card">
-            <!--Main product Image Slider -->
-            <div class="product-imgs">
-              <div class="img-display">
-                <div class="img-showcase">
-                  <img
-                    src="/assets/product-images/converse-black/converse-black-1.jpg"
-                    alt="shoe image"
-                  />
-                  <img
-                    src="/assets/product-images/converse-black/converse-black-2.jpg"
-                    alt="shoe image"
-                  />
-                  <img
-                    src="/assets/product-images/converse-black/converse-black-3.jpg"
-                    alt="shoe image"
-                  />
-                  <img
-                    src="/assets/product-images/converse-black/converse-black-4.jpg"
-                    alt="shoe image"
-                  />
-                </div>
-              </div>
-              <div class="img-select">
-                <div class="img-item">
-                  <a href="#" data-id="1">
-                    <img
-                      src="/assets/product-images/converse-black/converse-black-1.jpg"
-                      alt="shoe image"
-                    />
-                  </a>
-                </div>
-                <div class="img-item">
-                  <a href="#" data-id="2">
-                    <img
-                      src="/assets/product-images/converse-black/converse-black-2.jpg"
-                      alt="shoe image"
-                    />
-                  </a>
-                </div>
-                <div class="img-item">
-                  <a href="#" data-id="3">
-                    <img
-                      src="/assets/product-images/converse-black/converse-black-3.jpg"
-                      alt="shoe image"
-                    />
-                  </a>
-                </div>
-                <div class="img-item">
-                  <a href="#" data-id="4">
-                    <img
-                      src="/assets/product-images/converse-black/converse-black-4.jpg"
-                      alt="shoe image"
-                    />
-                  </a>
-                </div>
+    <div class="breadcrums">
+      <ol>
+        <li><a href="/index.html">Αρχική</a></li>
+        <li><a href="#">Παπούτσια</a></li>
+        <li><a href="#">Unisex</a></li>
+        <li>Custom Converse Black</li>
+      </ol>
+    </div>
+    <!-- Main product image slider and info section -->
+    <section class="product-main">
+      <div class="card-wrapper">
+        <div class="card">
+          <!--Main product Image Slider -->
+          <div class="product-imgs">
+            <div class="img-display">
+              <div class="img-showcase">
+                <img src="./assets/product-images/converse-black/converse-black-1.jpg" alt="shoe image" />
+                <img src="./assets/product-images/converse-black/converse-black-2.jpg" alt="shoe image" />
+                <img src="./assets/product-images/converse-black/converse-black-3.jpg" alt="shoe image" />
+                <img src="./assets/product-images/converse-black/converse-black-4.jpg" alt="shoe image" />
               </div>
             </div>
-            <!-- Product Info -->
-            <div class="product-content">
-              <h2 class="product-title">Custom Converse Black</h2>
-              <div class="product-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-                <span>4.7(21)</span>
+            <div class="img-select">
+              <div class="img-item">
+                <a href="#" data-id="1">
+                  <img src="./assets/product-images/converse-black/converse-black-1.jpg" alt="shoe image" />
+                </a>
               </div>
+              <div class="img-item">
+                <a href="#" data-id="2">
+                  <img src="./assets/product-images/converse-black/converse-black-2.jpg" alt="shoe image" />
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="3">
+                  <img src="./assets/product-images/converse-black/converse-black-3.jpg" alt="shoe image" />
+                </a>
+              </div>
+              <div class="img-item">
+                <a href="#" data-id="4">
+                  <img src="./assets/product-images/converse-black/converse-black-4.jpg" alt="shoe image" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Product Info -->
+          <div class="product-content">
+            <h2 class="product-title">Custom Converse Black</h2>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>4.7(21)</span>
+            </div>
 
-              <div class="product-price">
-                <p class="price">Τιμή: <span>€95.00</span></p>
-              </div>
+            <div class="product-price">
+              <p class="price">Τιμή: <span>€95.00</span></p>
+            </div>
 
-              <div class="product-detail">
-                <h2>Πληροφορίες για το προϊόν:</h2>
-                <p>
-                  Ψάχνεις κάτι μοναδικό; Αυτά τα μαύρα Converse είναι το απόλυτο
-                  combo τέχνης και στυλ, με χειροποίητα κεντήματα λουλουδιών που κάνουν κάθε βήμα σου να μιλάει από μόνο του.
-                  Κλασικό μαύρο με vintage κέντημα για ένα look που ξεφεύγει από
-                  τα συνηθισμένα, συνδυάζοντας άνεση και edgy αισθητική.
-                </p>
-                <p>
-                  Φτιαγμένα για σένα που θέλεις τα παπούτσια σου να είναι
-                  statement. Έτοιμος να τραβήξεις βλέμματα; Αυτά δεν είναι απλώς
-                  Converse – είναι τέχνη που φοράς!
-                </p>
-                <div class="product-size">
-                  <label for="sizes">Μέγεθος:</label>
-                  <select size="1" id="sizes" name="sizes">
-                    <option value="37">37 EU</option>
-                    <option value="38">38 EU</option>
-                    <option value="39">39 EU</option>
-                    <option value="40">40 EU</option>
-                    <option value="41">41 EU</option>
-                    <option value="42">42 EU</option>
-                  </select>
-                </div>
-                <ul>
-                  <li>Χρώμα: <span>Μαύρο</span></li>
-                  <li>Διαθεσιμότητα: <span>Διαθέσιμο</span></li>
-                </ul>
+            <div class="product-detail">
+              <h2>Πληροφορίες για το προϊόν:</h2>
+              <p>
+                Ψάχνεις κάτι μοναδικό; Αυτά τα μαύρα Converse είναι το απόλυτο
+                combo τέχνης και στυλ, με χειροποίητα κεντήματα λουλουδιών που κάνουν κάθε βήμα σου να μιλάει από μόνο
+                του.
+                Κλασικό μαύρο με vintage κέντημα για ένα look που ξεφεύγει από
+                τα συνηθισμένα, συνδυάζοντας άνεση και edgy αισθητική.
+              </p>
+              <p>
+                Φτιαγμένα για σένα που θέλεις τα παπούτσια σου να είναι
+                statement. Έτοιμος να τραβήξεις βλέμματα; Αυτά δεν είναι απλώς
+                Converse – είναι τέχνη που φοράς!
+              </p>
+              <div class="product-size">
+                <label for="sizes">Μέγεθος:</label>
+                <select size="1" id="sizes" name="sizes">
+                  <option value="37">37 EU</option>
+                  <option value="38">38 EU</option>
+                  <option value="39">39 EU</option>
+                  <option value="40">40 EU</option>
+                  <option value="41">41 EU</option>
+                  <option value="42">42 EU</option>
+                </select>
               </div>
+              <ul>
+                <li>Χρώμα: <span>Μαύρο</span></li>
+                <li>Διαθεσιμότητα: <span>Διαθέσιμο</span></li>
+              </ul>
+            </div>
 
-              <div class="purchase-info">
-               <label for="quantity">Ποσότητα:</label>
-                <input type="number" min="0" value="1" name="quantity" />
-                <button type="button" class="btn cart-btn">
-                  Προσθέστε στο καλάθι <i class="fas fa-shopping-cart"></i>
-                </button>
-              </div>
+            <div class="purchase-info">
+              <label for="quantity">Ποσότητα:</label>
+              <input type="number" min="0" value="1" name="quantity" />
+              <button type="button" class="btn cart-btn">
+                Προσθέστε στο καλάθι <i class="fas fa-shopping-cart"></i>
+              </button>
             </div>
           </div>
         </div>
-      </section>
-      <section class="product-info-section">
-        <h2 class="product-info-title">
-          Μαύρα Χειροποίητα Converse με Κέντημα
-        </h2>
-        <div class="product-info-wrapper">
-          <div class="product-info-left">
-            <p class="product-info-subtitle">Το απόλυτο Statement για τους λάτρεις του στυλ και της τέχνης!</p>
+      </div>
+    </section>
+    <section class="product-info-section">
+      <h2 class="product-info-title">
+        Μαύρα Χειροποίητα Converse με Κέντημα
+      </h2>
+      <div class="product-info-wrapper">
+        <div class="product-info-left">
+          <p class="product-info-subtitle">Το απόλυτο Statement για τους λάτρεις του στυλ και της τέχνης!</p>
           <p class="product-info">
             Αν ψάχνεις για το τέλειο ζευγάρι παπουτσιών που να συνδυάζει τη
             μοναδικότητα με τη χειροποίητη τέχνη, μόλις το βρήκες! Αυτά τα μαύρα
             Converse είναι πραγματικά έργα τέχνης – κεντημένα στο χέρι με
-            πανέμορφα λουλούδια  για να δώσουν στα βήματά σου έναν αέρα
+            πανέμορφα λουλούδια για να δώσουν στα βήματά σου έναν αέρα
             μαγείας και στυλ. </p>
-            <br>
-        <p> <span class="bold"> Γιατί είναι Μοναδικά:</span>
           <br>
-          <br> <ul>
-            <li><span class="bold"> Χειροποίητη Δημιουργία:</span>  Κάθε
+          <p> <span class="bold"> Γιατί είναι Μοναδικά:</span>
+            <br>
+            <br>
+          <ul>
+            <li><span class="bold"> Χειροποίητη Δημιουργία:</span> Κάθε
               ζευγάρι είναι μοναδικό και φτιαγμένο με μεράκι, από τα χέρια
               δημιουργών που βάζουν ψυχή και λεπτομέρεια σε κάθε βελονιά.</li>
-            <li> <span class="bold"> Σχέδιο που Ξεχωρίζει:</span>  Το διαχρονικό μαύρο χρώμα συνδυάζεται ιδανικά με τα
+            <li> <span class="bold"> Σχέδιο που Ξεχωρίζει:</span> Το διαχρονικό μαύρο χρώμα συνδυάζεται ιδανικά με τα
               κεντήματα, δημιουργώντας ένα ιδιαίτερο αποτέλεσμα που τραβάει τα
               βλέμματα και αποπνέει χαρακτήρα.</li>
             <li> <span class="bold"> Άνεση και Στυλ:</span> Άνετα, ανθεκτικά και
               απόλυτα προσαρμοσμένα στο προσωπικό σου στυλ, αυτά τα Converse είναι
               τέλεια για καθημερινές εξορμήσεις αλλά και για ιδιαίτερες περιστάσεις.</li>
           </ul>
-        </p>
-          </div>
-          
-           <div class="product-info-video"> <video  controls loop muted>
-            <source src="/assets/product-images/converse-black/converse-black-video.mp4" type="video/mp4">
-            
+          </p>
+        </div>
+
+        <div class="product-info-video"> <video controls loop muted>
+            <source src="./assets/product-images/converse-black/converse-black-video.mp4" type="video/mp4">
+
             Your browser does not support the video tag.
           </video> </div>
+      </div>
+
+    </section>
+    <section class="similar-products-section">
+      <h2>Μπορεί να σου αρέσουν</h2>
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="product-card">
+                <img class="product-card-img" src="./assets/product-images/converse-blue/converse-blue-1.jpg" alt="">
+                <div class="product-card-content">
+                  <h3 class="product-card-title">Custom Converse Blue</h3>
+                  <p class="product-card-text">Custom hi-tops με κεντημένα λουλούδια</p>
+                  <p class="product-card-price">€99.00</p>
+                  <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="product-card">
+                <img class="product-card-img" src="./assets/product-images/converse-green/converse-green-1.jpg" alt="">
+                <div class="product-card-content">
+                  <h3 class="product-card-title">Custom Converse Green</h3>
+                  <p class="product-card-text">Custom hi-tops με κεντημένα λουλούδια</p>
+                  <p class="product-card-price">€98.00</p>
+                  <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="product-card">
+                <img class="product-card-img" src="./assets/product-images/converse-purple/converse-purple-1.jpg"
+                  alt="">
+                <div class="product-card-content">
+                  <h3 class="product-card-title">Custom Converse Purple</h3>
+                  <p class="product-card-text">Custom hi-tops με κεντημένους αστερισμούς</p>
+                  <p class="product-card-price">€88.00</p>
+                  <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="product-card">
+                <img class="product-card-img" src="./assets/product-images/converse-red/converse-red-1.jpg" alt="">
+                <div class="product-card-content">
+                  <h3 class="product-card-title">Custom Converse Red</h3>
+                  <p class="product-card-text">Custom hi-tops με κοκκινο στρας.</p>
+                  <p class="product-card-price">€85.00</p>
+                  <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="product-card">
+                <img class="product-card-img" src="./assets/product-images/converse-white/converse-white-1.jpg" alt="">
+                <div class="product-card-content">
+                  <h3 class="product-card-title">Custom Converse White</h3>
+                  <p class="product-card-text">Custom hi-tops με ζωγραφισμένα slogans</p>
+                  <p class="product-card-price">€75.00</p>
+                  <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <div class="product-card">
+                <img class="product-card-img" src="./assets/product-images/converse-yellow/converse-yellow-1.jpg"
+                  alt="">
+                <div class="product-card-content">
+                  <h3 class="product-card-title">Custom Converse Yellow</h3>
+                  <p class="product-card-text">Custom hi-tops με κεντημένα λουλούδια και πεταλούδες</p>
+                  <p class="product-card-price">€95.00</p>
+                  <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
-        
-      </section>
-      <section class="similar-products-section">
-        <h2>Μπορεί να σου αρέσουν</h2>
-         <!-- Swiper -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href="#">
-          <div class="product-card">
-            <img class="product-card-img" src="/assets/product-images/converse-blue/converse-blue-1.jpg" alt="">
-            <div class="product-card-content">
-              <h3 class="product-card-title">Custom Converse Blue</h3>
-              <p class="product-card-text">Custom hi-tops με κεντημένα λουλούδια</p>
-              <p class="product-card-price">€99.00</p>
-              <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
-            </div>
-          </div>
-        </a>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-slide">
-        <a href="#">
-          <div class="product-card">
-            <img class="product-card-img" src="/assets/product-images/converse-green/converse-green-1.jpg" alt="">
-            <div class="product-card-content">
-              <h3 class="product-card-title">Custom Converse Green</h3>
-              <p class="product-card-text">Custom hi-tops με κεντημένα λουλούδια</p>
-              <p class="product-card-price">€98.00</p>
-              <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="#">
-          <div class="product-card">
-            <img class="product-card-img" src="/assets/product-images/converse-purple/converse-purple-1.jpg" alt="">
-            <div class="product-card-content">
-              <h3 class="product-card-title">Custom Converse Purple</h3>
-              <p class="product-card-text">Custom hi-tops με κεντημένους αστερισμούς</p>
-              <p class="product-card-price">€88.00</p>
-              <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="#">
-          <div class="product-card">
-            <img class="product-card-img" src="/assets/product-images/converse-red/converse-red-1.jpg" alt="">
-            <div class="product-card-content">
-              <h3 class="product-card-title">Custom Converse Red</h3>
-              <p class="product-card-text">Custom hi-tops με κοκκινο στρας.</p>
-              <p class="product-card-price">€85.00</p>
-              <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="#">
-          <div class="product-card">
-            <img class="product-card-img" src="/assets/product-images/converse-white/converse-white-1.jpg" alt="">
-            <div class="product-card-content">
-              <h3 class="product-card-title">Custom Converse White</h3>
-              <p class="product-card-text">Custom hi-tops με ζωγραφισμένα slogans</p>
-              <p class="product-card-price">€75.00</p>
-              <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="swiper-slide">
-        <a href="#">
-          <div class="product-card">
-            <img class="product-card-img" src="/assets/product-images/converse-yellow/converse-yellow-1.jpg" alt="">
-            <div class="product-card-content">
-              <h3 class="product-card-title">Custom Converse Yellow</h3>
-              <p class="product-card-text">Custom hi-tops με κεντημένα λουλούδια και πεταλούδες</p>
-              <p class="product-card-price">€95.00</p>
-              <button class="product-card-btn cart-btn">Προσθέστε στο καλάθι</button>
-            </div>
-          </div>
-        </a>
-      </div>
-      
+      <div class="similar-products-slider"></div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-left">
+      <img class="footer-logo" src="./assets/Solemate-logo.jpg" alt="logo" />
+      <h4>Βρες το ταίρι στα βήματά σου!</h4>
+      <p>
+        Για σένα που το στυλ είναι τρόπος ζωής, τα sneakers σου σε περιμένουν
+        εδώ. <br>Γιατί τα σωστά παπούτσια είναι αληθινοί soulmate!
+      </p>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
-        <div class="similar-products-slider"></div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-left">
-        <img class="footer-logo" src="/assets/Solemate-logo.jpg" alt="logo" />
-        <h4>Βρες το ταίρι στα βήματά σου!</h4>
-        <p>
-          Για σένα που το στυλ είναι τρόπος ζωής, τα sneakers σου σε περιμένουν
-          εδώ. <br>Γιατί τα σωστά παπούτσια είναι αληθινοί soulmate!
-        </p>
-      </div>
-      
-      <div class="footer-contact">
-        <h3>Επικοινωνία</h4>
+
+    <div class="footer-contact">
+      <h3>Επικοινωνία</h4>
         <ul>
           <li>Διεύθυνση:<span class="bold">Ερμού 127, Αθήνα</span></li>
           <li>Email:<span class="bold">solemateinfo@solemate.com</span></li>
@@ -350,31 +312,36 @@
         </ul>
         <h4>Ακολουθήστε μας</h4>
         <div class="socials">
-          <a href = "#">
-            <i class = "fab fa-facebook-f"></i>
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
           </a>
-          <a href = "#">
-            <i class = "fab fa-twitter"></i>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
           </a>
-          <a href = "#">
-            <i class = "fab fa-instagram"></i>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
           </a>
-          <a href = "#">
-            <i class = "fab fa-whatsapp"></i>
+          <a href="#">
+            <i class="fab fa-whatsapp"></i>
           </a>
-          <a href = "#">
-            <i class = "fab fa-pinterest"></i>
+          <a href="#">
+            <i class="fab fa-pinterest"></i>
           </a>
         </div>
-    
-      </div>
-      <div class="footer-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.0017960220484!2d23.719360475359917!3d37.97708740048119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd2228d0bdc1%3A0x67c55bc48a65a494!2sErmou%20127%2C%20Athina%20105%2055!5e0!3m2!1sen!2sgr!4v1730555877773!5m2!1sen!2sgr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </footer>
-    <div class="attribution">
-      <p> <a href="#">Όροι χρήσης</a></p> 
-      <p>© 2024 solemate.com. All Rights Reserved. Designed & Developed by <a href="https://github.com/3vilBonobo" target=”_blank”>Irinella Boutsika</a></p>
+
     </div>
-  </body>
+    <div class="footer-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.0017960220484!2d23.719360475359917!3d37.97708740048119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd2228d0bdc1%3A0x67c55bc48a65a494!2sErmou%20127%2C%20Athina%20105%2055!5e0!3m2!1sen!2sgr!4v1730555877773!5m2!1sen!2sgr"
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </footer>
+  <div class="attribution">
+    <p> <a href="#">Όροι χρήσης</a></p>
+    <p>© 2024 solemate.com. All Rights Reserved. Designed & Developed by <a href="https://github.com/3vilBonobo"
+        target=”_blank”>Irinella Boutsika</a></p>
+  </div>
+</body>
+
 </html>
